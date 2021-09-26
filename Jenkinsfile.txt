@@ -1,0 +1,14 @@
+pipeline
+{
+    agent any
+    stages
+    {
+        stage('Pint on Master Branch')
+        {
+            when(BRANCH_NAME != 'Master')
+            steps{ sh 'echo this is master branch'}
+        }
+
+    }
+
+}
